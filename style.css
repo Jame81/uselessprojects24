@@ -1,0 +1,71 @@
+.buffering-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.buffering-animation {
+	display: flex;
+}
+
+.buffering-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 5px;
+	animation: buffering 1s infinite;
+}
+
+.red {
+	background-color: #FF0000;
+}
+
+.blue {
+	background-color: #0000FF;
+}
+
+.green {
+	background-color: #00FF00;
+}
+
+@keyframes buffering {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.plane-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.plane {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	animation: fly 5s infinite;
+}
+
+@keyframes fly {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 100%;
+	}
+}
